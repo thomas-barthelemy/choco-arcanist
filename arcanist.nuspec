@@ -5,11 +5,19 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>arcanist</id>
     <title>Arcanist</title>
-    <version>0.0.6</version>
-    <authors>Thomas Barthelemy</authors>
+    <version>0.0.6.20150807</version>
+    <authors>Phacility</authors>
+    <owners>Thomas Barthelemy</owners>
     <summary>>Arcanist is the command-line tool for Phabricator.</summary>
-    <description>Arcanist is the command-line tool for Phabricator. It allows you to interact with Phabricator installs to send code for review, download patches, transfer files, view status, make API calls, and various other things. You can read more in the User Guide. For more information about Phabricator, see http://phabricator.org/.</description>
-    <projectUrl>https://github.com/thomas-barthelemy/choco-arcanist</projectUrl>
+    <description>
+        Arcanist is the command-line tool for Phabricator.
+        It allows you to interact with Phabricator installs to send code for review, download patches, transfer files, view status, make API calls, and various other things.
+        You can read more in the User Guide. For more information about Phabricator, see http://phabricator.org/.
+
+        This package installs the latest master in the chocolatey lib directory (default: %ProgramData%/chocolatey/lib/arcanist).
+    </description>
+    <projectUrl>https://github.com/phacility/arcanist</projectUrl>
+    <licenseUrl>https://github.com/phacility/arcanist/blob/master/LICENSE</licenseUrl>
     <tags>phabricator, arcanist, cli</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Important note about https://cdn.rawgit.com: Files are cached permanently after the first request. Use commit URLs when updating the icon. -->

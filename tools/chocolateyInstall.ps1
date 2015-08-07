@@ -13,8 +13,17 @@ try {
         rm -r -f $arcanistPath
     }
 
-    git clone --depth 1 -q https://github.com/phacility/libphutil.git "$libphutilPath"
-    git clone --depth 1 -q https://github.com/phacility/arcanist.git "$arcanistPath"
+    Install-ChocolateyZipPackage 'libphutil' `
+        https://github.com/phacility/libphutil/archive/master.zip `
+        $libphutilPath
+
+    Install-ChocolateyZipPackage 'arcanist' `
+        https://github.com/phacility/arcanist/archive/master.zip `
+        $arcanistPath
+
+    if(!(Get-Command arc -errorAction SilentlyContinue)) {
+        Install-ChocolateyPath $arcanistPath/bin
+    }
 
 } catch {
     Write-ChocolateyFailure "$packageName" "$($_.Exception.Message)"
